@@ -4,7 +4,7 @@ Did you ever play StarCraft back in the days? Did you know that StarCraft Brood 
 
 The two main drivers behind casting the games in English are Artosis and Tasteless. You can find the latest ASL (Afreeca Star League) Season 20 on YouTube.
 
-!!! note "Spoiler Alert"
+!!! warning "Spoiler Alert"
 
     Be prepared that the playlist shows the finals first so it might spoil if you intend to wathc from the Round of 24 ;)
     
