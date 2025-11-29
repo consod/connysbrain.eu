@@ -1,4 +1,4 @@
-#StarCraft
+# StarCraft
 
 Did you ever play StarCraft back in the days? Did you know that StarCraft Brood War is still played competitively in South Korea?
 
