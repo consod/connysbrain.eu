@@ -1,0 +1,22 @@
+[project]
+name = "connysbrain-eu"
+version = "0.1.0"
+description = "Connys thoughts"
+authors = [
+    {name = "Conny Söderholm",email = "conny@connysoderholm.com"}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = "3.14"
+dependencies = [
+    "zensical (>=0.0.10,<0.0.11)",
+    "mypy (>=1.19.0,<2.0.0)",
+    "ruff (>=0.14.7,<0.15.0)"
+]
+
+[tool.poetry]
+packages = [{include = "connysbrain"}]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
