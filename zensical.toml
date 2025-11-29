@@ -54,6 +54,9 @@ nav = [
           {"Zed" = "programming/editors/zed.md"},
        ]},
   ]},
+{"Entertainment" = [
+     {"StarCraft" = "entertainment/starcraft/starcraft.md"},
+  ]},
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
