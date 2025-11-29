@@ -8,4 +8,4 @@ On this site I will share my thoughts and experiences on various topics. I will 
 
 ## This site
 
-This site is built with [Zensical](https://zensical.org), a static site generator written in Rust and Python. You can install it like a Python package.
+This site is built with [Zensical](https://zensical.org), a static site generator written in Rust and Python. You can install it like a Python package. The site is hosted on GitHub Pages with GitHub Actions. Name Servers and DNS management on Cloudflare.
