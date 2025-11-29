@@ -35,6 +35,7 @@ repo_url = "https://github.com/consod/connysbrain.eu/"
 # Read more: https://zensical.org/docs/setup/basics/#copyright
 copyright = """
 Copyright &copy; 2025 Conny Söderholm
+<a href="#__consent">Change cookie settings</a>
 """
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
@@ -281,9 +282,9 @@ font = "Fira Code"
 # of suitably licensed fonts. There are options for a normal text font and for
 # a monospaced font used in code blocks.
 # ----------------------------------------------------------------------------
-#[project.theme.font]
-#text = "Inter"
-#code = "Jetbrains Mono"
+[project.theme.font]
+text = "Fira Code"
+code = "Jetbrains Mono"
 
 # ----------------------------------------------------------------------------
 # You can configure your own logo to be shown in the header using the "logo"
@@ -310,3 +311,13 @@ repo = "fontawesome/brands/github"
 [[project.extra.social]]
 icon = "fontawesome/brands/github"
 link = "https://github.com/consod/connysbrain.eu"
+
+[project.extra.consent]
+title = "Cookie consent"
+description = """
+    I use cookies to recognize your repeated visits and preferences, as well
+    as to measure the effectiveness of the site and whether users
+    find what they're searching for. With your consent, you're helping me to
+    make this site better.
+"""
+actions = ["accept", "manage", "reject"]
