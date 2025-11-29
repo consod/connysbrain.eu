@@ -6,6 +6,6 @@ The two main drivers behind casting the games in English are Artosis and Tastele
 
 !!! warning "Spoiler Alert"
 
-    Be prepared that the playlist shows the finals first so it might spoil if you intend to wathc from the Round of 24 ;)
+    Be prepared that the playlist shows the finals first so it might spoil if you intend to watch from the Round of 24 ;)
     
 [ASL Season 20 Playlist](https://youtube.com/playlist?list=PLo2fPnM8EiQy1dDbGnTYvcwK8sCWHEpbl&si=BriSPJqW4MBZ34DL)
