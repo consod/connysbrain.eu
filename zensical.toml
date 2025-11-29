@@ -267,6 +267,9 @@ features = [
 # Read more:
 # - https://zensical.org/docs/setup/colors/
 # ----------------------------------------------------------------------------
+[project.theme]
+font = false
+
 [[project.theme.palette]]
 scheme = "default"
 toggle.icon = "lucide/sun"
