@@ -48,6 +48,11 @@ nav = [
 {"Guides" = [
      {"Markdown" = "guides/markdown.md"},
   ]},
+{"Programming" = [
+     {"Editors" = [
+          {"Zed" = "programming/editors/zed.md"},
+       ]},
+  ]},
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize

@@ -1,5 +1,5 @@
 ---
-icon: lucide/square-pen
+# icon: lucide/square-pen
 date: 2025-11-29
 ---
 
