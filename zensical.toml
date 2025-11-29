@@ -302,11 +302,11 @@ font = "Fira Code"
 # ----------------------------------------------------------------------------
 [project.theme.icon]
 logo = "material/brain"
-#repo = "lucide/smile"
+repo = "fontawesome/brands/github"
 
 # ----------------------------------------------------------------------------
 # The "extra" section contains miscellaneous settings.
 # ----------------------------------------------------------------------------
-#[[project.extra.social]]
-#icon = "fontawesome/brands/github"
-#link = "https://github.com/user/repo"
+[[project.extra.social]]
+icon = "fontawesome/brands/github"
+link = "https://github.com/consod/connysbrain.eu"
