@@ -2,6 +2,11 @@
 
 Did you ever play StarCraft back in the days? Did you know that StarCraft Brood War is still played competitively in South Korea?
 
+<figure markdown="span">
+  ![Image title](https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Starcraft_Gamescom_2017_%2836851382835%29.jpg/330px-Starcraft_Gamescom_2017_%2836851382835%29.jpg){ width="300" }
+  <figcaption>StarCraft Brood War Photo: dronepicr, license CC BY 2.0, via Wikimedia Commons</figcaption>
+</figure>
+
 The two main drivers behind casting the games in English are Artosis and Tasteless. You can find the latest ASL (Afreeca Star League) Season 20 on YouTube.
 
 !!! warning "Spoiler Alert"
