@@ -2,8 +2,9 @@
 icon: lucide/rocket
 ---
 
-# Hi!
+# Connys Brain
 
+Hi!
 On this site I will share my thoughts and experiences on various topics. I will write about whatever interests me, kind of like a journal.
 
 ## This site
