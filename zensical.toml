@@ -81,6 +81,7 @@ nav = [
 # Section for configuring theme options
 # ----------------------------------------------------------------------------
 [project.theme]
+font= false
 
 # change this to "classic" to use the traditional Material for MkDocs look.
 #variant = "classic"
@@ -267,9 +268,6 @@ features = [
 # Read more:
 # - https://zensical.org/docs/setup/colors/
 # ----------------------------------------------------------------------------
-[project.theme]
-font = false
-
 [[project.theme.palette]]
 scheme = "default"
 toggle.icon = "lucide/sun"
