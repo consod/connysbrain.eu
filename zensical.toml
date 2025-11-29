@@ -324,3 +324,7 @@ description = """
     make this site better.
 """
 actions = ["accept", "manage", "reject"]
+
+[project.markdown_extensions.admonition]
+[project.markdown_extensions.pymdownx.details]
+[project.markdown_extensions.pymdownx.superfences]
