@@ -57,6 +57,13 @@ nav = [
 {"Entertainment" = [
      {"StarCraft" = "entertainment/starcraft/asl.md"},
   ]},
+{"Eat & Drink" = [
+     {"Drink" = [
+          {"Tea" = [
+               {"Green Tea" = "eat_and_drink/drink/tea/green_tea/matcha.md"},
+            ]},
+       ]},
+  ]}
 ]
 
 # With the "extra_css" option you can add your own CSS styling to customize
