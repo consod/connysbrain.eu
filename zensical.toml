@@ -60,7 +60,9 @@ nav = [
 {"Eat & Drink" = [
      {"Drink" = [
           {"Tea" = [
-               {"Green Tea" = "eat_and_drink/drink/tea/green_tea/matcha.md"},
+               {"Green Tea" = [
+                    {"Matcha" = "eat_and_drink/drink/tea/green_tea/matcha.md"},
+               ]},
             ]},
        ]},
   ]}
