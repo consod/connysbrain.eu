@@ -46,27 +46,34 @@ Copyright &copy; 2025 Conny Söderholm
 #
 # Read more: https://zensical.org/docs/setup/navigation/
 nav = [
-{"Guides" = [
-     {"Markdown" = "guides/markdown.md"},
+  {"Guides" = [
+    {"Markdown" = "guides/markdown.md"},
   ]},
-{"Programming" = [
-     {"Editors" = [
-          {"Zed" = "programming/editors/zed.md"},
-       ]},
+
+  {"Programming" = [
+    {"Editors" = [
+      {"Zed" = [
+        {"Overview" = "programming/editors/zed.md"},
+        {"Zed Git Bash" = "programming/editors/add_git_bash_to_zed.md"},
+      ]},
+    ]},
   ]},
-{"Entertainment" = [
-     {"StarCraft" = "entertainment/starcraft/asl.md"},
+
+  {"Entertainment" = [
+    {"StarCraft" = "entertainment/starcraft/asl.md"},
   ]},
-{"Eat & Drink" = [
-     {"Drink" = [
-          {"Tea" = [
-               {"Green Tea" = [
-                    {"Matcha" = "eat_and_drink/drink/tea/green_tea/matcha.md"},
-               ]},
-            ]},
-       ]},
-  ]}
+
+  {"Eat & Drink" = [
+    {"Drink" = [
+      {"Tea" = [
+        {"Green Tea" = [
+          {"Matcha" = "eat_and_drink/drink/tea/green_tea/matcha.md"},
+        ]},
+      ]},
+    ]},
+  ]},
 ]
+
 
 # With the "extra_css" option you can add your own CSS styling to customize
 # your Zensical project according to your needs. You can add any number of
@@ -355,3 +362,4 @@ alternate_style = true
 [project.markdown_extensions.tables]
 [project.markdown_extensions.md_in_html]
 [project.markdown_extensions.pymdownx.blocks.caption]
+[project.markdown_extensions.footnotes]
