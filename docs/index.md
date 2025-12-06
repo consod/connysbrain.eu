@@ -13,5 +13,5 @@ This site is built with [Zensical](https://zensical.org), a static site generato
 
 <figure markdown="span">
   ![Brain](https://ik.imagekit.io/vu0zmaqce/brain_1.jpg)
-  <figcaption>Auto-resized via Client Hints</figcaption>
+  <figcaption>Image created by author with Koala Images</figcaption>
 </figure>
