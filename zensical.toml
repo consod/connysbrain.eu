@@ -54,7 +54,7 @@ nav = [
     {"Editors" = [
       {"Zed" = [
         {"Overview" = "programming/editors/zed.md"},
-        {"Zed Git Bash" = "programming/editors/add_git_bash_to_zed.md"},
+        {"Git Bash" = "programming/editors/add_git_bash_to_zed.md"},
       ]},
     ]},
   ]},
