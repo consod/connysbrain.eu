@@ -1,3 +1,6 @@
+# Zensical's main documentation
+[https://zensical.org/docs/get-started/][Zensical docs]
+
 # Create your site
 
 After you've installed Zensical, you can bootstrap your project
