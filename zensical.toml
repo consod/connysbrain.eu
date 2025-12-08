@@ -332,6 +332,11 @@ repo = "fontawesome/brands/github"
 icon = "fontawesome/brands/github"
 link = "https://github.com/consod/connysbrain.eu"
 
+[project.extra]
+extrahead = [
+  '<meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">'
+]
+
 [project.extra.consent]
 title = "Cookie consent"
 description = """
