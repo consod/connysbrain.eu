@@ -51,9 +51,11 @@ to source files. Start it with:
 
 ``` sh
 zensical serve
+# or for clearing cache as well
+zensical serve --clean
 ```
 
-Point your browser to [localhost:8000][live preview] and you should see:
+Point your browser to [localhost:8000][live preview] to see your site.
 
   [live preview]: http://localhost:8000
   [Creating your site]: assets/screenshots/creating-your-site.png#gh-light-mode-only
@@ -72,9 +74,8 @@ zensical build
 # Navigation Generator
 The scripts/generate_nav.py script automatically generates the navigation structure based on the docs/ folder hierarchy:
 
-Reads directory structure and .order files for custom ordering
-Extracts page titles from frontmatter when available, falls back to filename
-Automatically formats category names (e.g., eat_and_drink becomes Eat & Drink)
+Reads directory structure and .order files for custom ordering.
+Extracts page titles from frontmatter when available, otherwise falls back to filenameand automatically formats category names (e.g., eat_and_drink becomes Eat & Drink)
 Updates the nav section in zensical.toml after the copyright field
 Handles both single-line and multi-line copyright declarations
 The script ensures the navigation stays synchronized with the documentation structure without manual updates.
