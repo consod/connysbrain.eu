@@ -8,10 +8,8 @@ SIZES = [
     (320, 70),   # Small mobile devices
     (375, 70),   # iPhone SE/older Android
     (414, 75),   # iPhone 8 Plus/XR
-    (768, 80),   # Tablets (iPad, Android)
-    (1024, 80),  # Small laptops/tablet landscape
-    (1280, 85),  # Standard desktop
-    (1440, 85),  # Retina/MacBook Pro
+    (1024, 85),  # Standard desktop
+    (1280, 85),  # Retina/MacBook Pro
     (1920, 90),  # Full HD displays
     (2560, 90),  # QHD/2K displays
     (3840, 95)   # 4K/UHD displays
@@ -24,14 +22,13 @@ def generate_client_hints_meta():
 
 
 def update_figure_with_srcset(content):
-    """Update figure/img tags with srcset if not already present"""
+    """Update figure/img tags with srcset and wrap with lightGallery links"""
     soup = BeautifulSoup(content, 'html.parser')
 
-    for img in soup.find_all('img'):
-        # Skip if srcset already exists
-        if img.get('srcset'):
+    for figure in soup.find_all('figure'):
+        img = figure.find('img')
+        if not img or img.get('srcset'):
             continue
-
 
         src = img.get('src')
         if not src or not isinstance(src, str) or not src.startswith('http'):
@@ -48,6 +45,25 @@ def update_figure_with_srcset(content):
         img['srcset'] = ', '.join(srcset_parts)
         img['sizes'] = "(max-width: 480px) 100vw, (max-width: 768px) 90vw, 1024px"
         img['loading'] = 'lazy'
+
+        # Create lightGallery link
+        fig_caption = figure.find('figcaption')
+        caption_text = fig_caption.get_text() if fig_caption else ""
+
+        # Extract full size image URL (largest in SIZES)
+        full_size_url = f"{BASE_URL}{filename}?tr=w-{SIZES[-1][0]},q-{SIZES[-1][1]}"
+
+        # Create link element
+        link = soup.new_tag('a',
+                           attrs={
+                             'href': full_size_url,
+                             'data-lg-size': f'{SIZES[-1][0]}-{int(SIZES[-1][0]*0.8)}',
+                             'data-sub-html': f"<figcaption>{caption_text}</figcaption>"
+                           }
+                         )
+
+        # Wrap img with link
+        img.wrap(link)
 
     return str(soup)
 
@@ -66,17 +82,13 @@ def process_markdown_files(root_dir="../docs"):
         with open(file_path, 'r', encoding='utf-8') as f:
             content = f.read()
 
-        # Find HTML blocks containing <figure> or <img>
-        html_blocks = re.finditer(r'<(figure|img)[^>]*>.*?</\1>', content, re.DOTALL)
+        updated_content = update_figure_with_srcset(content)
 
-        if html_blocks:
-            updated_content = update_figure_with_srcset(content)
-
-            # Save only if changes were made
-            if updated_content != content:
-                with open(file_path, 'w', encoding='utf-8') as f:
-                    f.write(updated_content)
-                print(f"Updated: {file_path}")
+        # Save only if changes were made
+        if updated_content != content:
+            with open(file_path, 'w', encoding='utf-8') as f:
+                f.write(updated_content)
+            print(f"Updated: {file_path}")
 
 # Run the script
 process_markdown_files()
