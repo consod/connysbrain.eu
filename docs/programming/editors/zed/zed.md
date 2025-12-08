@@ -1,9 +1,9 @@
 ---
-# icon: lucide/square-pen
+title: What is Zed?
 date: 2025-11-29
 ---
 
-# ZED.DEV Love your editor again
+# Zed.dev Love your editor again
 
 ## What is Zed?
 

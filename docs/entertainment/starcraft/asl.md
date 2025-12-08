@@ -1,5 +1,9 @@
+---
+title: StarCraft?
+---
 # StarCraft
 
+StarCraft is a real-time strategy (RTS) computer game developed by Blizzard Entertainment in 1998.
 Did you ever play StarCraft back in the days? Did you know that StarCraft Brood War is still played competitively in South Korea?
 
 <figure markdown="1">

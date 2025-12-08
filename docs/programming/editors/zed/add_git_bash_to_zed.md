@@ -1,3 +1,7 @@
+---
+title: Git Bash in Zed
+---
+
 # Git Bash as default terminal in Zed - Windows
 
 To add Git Bash as the default terminal in Zed for Windows, you need to add it to settings.json file.

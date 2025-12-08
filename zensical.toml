@@ -33,10 +33,41 @@ repo_url = "https://github.com/consod/connysbrain.eu/"
 # fragment.
 #
 # Read more: https://zensical.org/docs/setup/basics/#copyright
-copyright = """
-Copyright &copy; 2025 Conny Söderholm
+copyright = """Copyright &copy; 2025 Conny Söderholm
 <a href="#__consent">Change cookie settings</a>
 """
+
+nav = [
+  {"Eat & Drink" = [    {"Drink" = [
+      {"Tea" = [
+        {"Green Tea" = [
+          {"Matcha" = "eat_and_drink/drink/tea/green_tea/matcha.md"}
+
+          ]}
+
+        ]}
+
+      ]}
+  ]},
+  {"Entertainment" = [    {"Starcraft" = [
+      {"StarCraft?" = "entertainment/starcraft/asl.md"}
+
+      ]}
+  ]},
+  {"Guides" = [    {"Markdown" = "guides/markdown.md"}
+  ]},
+  {"Programming" = [    {"Index" = "programming/index.md"},
+    {"Editors" = [
+      {"Zed" = [
+        {"Git Bash in Zed" = "programming/editors/zed/add_git_bash_to_zed.md"},
+        {"What is Zed?" = "programming/editors/zed/zed.md"}
+
+        ]}
+
+      ]}
+  ]}
+]
+
 
 # Zensical supports both implicit navigation and explicitly defined navigation.
 # If you decide not to define a navigation here then Zensical will simply
@@ -45,34 +76,6 @@ Copyright &copy; 2025 Conny Söderholm
 # can be defined using TOML syntax.
 #
 # Read more: https://zensical.org/docs/setup/navigation/
-nav = [
-  {"Guides" = [
-    {"Markdown" = "guides/markdown.md"},
-  ]},
-
-  {"Programming" = [
-    {"Editors" = [
-      {"Zed" = [
-        {"Overview" = "programming/editors/zed/zed.md"},
-        {"Git Bash" = "programming/editors/zed/add_git_bash_to_zed.md"},
-      ]},
-    ]},
-  ]},
-
-  {"Entertainment" = [
-    {"StarCraft" = "entertainment/starcraft/asl.md"},
-  ]},
-
-  {"Eat & Drink" = [
-    {"Drink" = [
-      {"Tea" = [
-        {"Green Tea" = [
-          {"Matcha" = "eat_and_drink/drink/tea/green_tea/matcha.md"},
-        ]},
-      ]},
-    ]},
-  ]},
-]
 
 
 # With the "extra_css" option you can add your own CSS styling to customize
