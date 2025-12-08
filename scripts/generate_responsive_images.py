@@ -4,7 +4,18 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 BASE_URL = "https://ik.imagekit.io/vu0zmaqce/"
-SIZES = [(360, 75), (640, 80), (768, 80), (1024, 85)]
+SIZES = [
+    (320, 70),   # Small mobile devices
+    (375, 70),   # iPhone SE/older Android
+    (414, 75),   # iPhone 8 Plus/XR
+    (768, 80),   # Tablets (iPad, Android)
+    (1024, 80),  # Small laptops/tablet landscape
+    (1280, 85),  # Standard desktop
+    (1440, 85),  # Retina/MacBook Pro
+    (1920, 90),  # Full HD displays
+    (2560, 90),  # QHD/2K displays
+    (3840, 95)   # 4K/UHD displays
+]
 
 
 def generate_client_hints_meta():
@@ -21,8 +32,9 @@ def update_figure_with_srcset(content):
         if img.get('srcset'):
             continue
 
+
         src = img.get('src')
-        if not src or not src.startswith('http'):
+        if not src or not isinstance(src, str) or not src.startswith('http'):
             continue
 
         # Extract filename
