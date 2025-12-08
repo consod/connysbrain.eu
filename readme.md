@@ -88,7 +88,7 @@ The scripts/generate_responsive_images.py script processes images to create resp
 
 Optimizes images for web delivery \
 Generates multiple sizes for responsive design \
-Integrates with the Zensical build process \
+Integrates with the Zensical build process
 
 ## GitHub Actions Workflow
 The site uses a CI/CD pipeline configured in .github/workflows/documentation.yml:
@@ -100,7 +100,7 @@ Installs Zensical and BeautifulSoup4 \
 Runs the responsive images script \
 Executes the navigation generator \
 Builds the site with zensical build --clean \
-Uploads the built site as an artifact \
+Uploads the built site as an artifact
 
 ### Deploy Job:
 
@@ -110,4 +110,4 @@ Configures the deployment environment
 ### Fallback Deploy:
 
 Provides a safety mechanism to deploy a previous successful build if the current build fails \
-Ensures site availability even when new changes introduce build issues \
+Ensures site availability even when new changes introduce build issues
