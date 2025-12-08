@@ -10,18 +10,15 @@ description: StarCraft, the iconic real-time strategy game.
 StarCraft is a real-time strategy (RTS) computer game developed by Blizzard Entertainment in 1998.
 Did you ever play StarCraft back in the days? Did you know that StarCraft Brood War is still played competitively in South Korea?
 
-
 <div id="lightgallery">
-  <figure>
-    <a href="https://upload.wikimedia.org/wikipedia/commons/5/58/Starcraft_Gamescom_2017_%2836851382835%29.jpg">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Starcraft_Gamescom_2017_%2836851382835%29.jpg/960px-Starcraft_Gamescom_2017_%2836851382835%29.jpg" alt="StarCraft Gamescom 2017" width="300">
-    </a>
-    <figcaption>
-      StarCraft Gamescom 2017 – Photo: dronepicr, license CC BY 2.0, via 
-      <a href="https://commons.wikimedia.org/wiki/File:Starcraft_Gamescom_2017_(36851382835).jpg">Wikimedia Commons</a>
-    </figcaption>
-  </figure>
+  <a href="https://upload.wikimedia.org/wikipedia/commons/5/58/Starcraft_Gamescom_2017_%2836851382835%29.jpg"
+     data-sub-html="&lt;h4&gt;StarCraft Gamescom 2017&lt;/h4&gt;&lt;p&gt;Photo: dronepicr, license CC BY 2.0, via &lt;a href='https://commons.wikimedia.org/wiki/File:Starcraft_Gamescom_2017_(36851382835).jpg'&gt;Wikimedia Commons&lt;/a&gt;&lt;/p&gt;">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Starcraft_Gamescom_2017_%2836851382835%29.jpg/960px-Starcraft_Gamescom_2017_%2836851382835%29.jpg" alt="StarCraft Gamescom 2017" width="300">
+  </a>
 </div>
+
+
+
 
 
 
