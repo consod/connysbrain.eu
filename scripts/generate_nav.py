@@ -56,9 +56,30 @@ def process_directory_text(dir_path, docs_path, indent=4):
     """Process a directory and return its navigation structure as formatted text."""
     lines = []
 
+    # Check for .order file
+    order_file = dir_path / ".order"
+    ordered_files = []
+    if order_file.exists():
+        with open(order_file, 'r') as f:
+            ordered_files = [line.strip() for line in f if line.strip()]
+
+    # Get all markdown files
+    all_md_files = [f for f in dir_path.iterdir() if f.is_file() and f.suffix == '.md']
+
+    # Sort files according to .order, then add remaining files
+    sorted_files = []
+    # First add files in order specified by .order
+    for filename in ordered_files:
+        file_path = dir_path / filename
+        if file_path.exists():
+            sorted_files.append(file_path)
+
+    # Then add remaining files not in .order
+    remaining_files = [f for f in all_md_files if f not in sorted_files]
+    sorted_files.extend(sorted(remaining_files, key=lambda x: x.name))
+
     # Add markdown files in this directory
-    md_files = sorted([f for f in dir_path.iterdir() if f.is_file() and f.suffix == '.md'])
-    for file_path in md_files:
+    for file_path in sorted_files:
         # Extract title from frontmatter
         title = extract_title_from_frontmatter(file_path)
 
@@ -73,7 +94,7 @@ def process_directory_text(dir_path, docs_path, indent=4):
         lines.append(f"{' ' * indent}{{\"{title}\" = \"{rel_path}\"}},")
 
     # Process subdirectories
-    subdirs = sorted([d for d in dir_path.iterdir() if d.is_dir()])
+    subdirs = sorted([d for d in dir_path.iterdir() if d.is_dir()], key=lambda x: x.name)
     for subdir in subdirs:
         subdir_name = subdir.name.replace('_', ' ').title()
         subdir_content = process_directory_text(subdir, docs_path, indent + 2)
