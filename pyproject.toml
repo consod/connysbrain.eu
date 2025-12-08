@@ -14,7 +14,9 @@ dependencies = [
     "ruff (>=0.14.7,<0.15.0)",
     "beautifulsoup4 (>=4.14.3,<5.0.0)",
     "pillow (>=11.0.0)",
-    "requests (>=2.32.0)"
+    "requests (>=2.32.0)",
+    "types-requests (>=2.32.4.20250913,<3.0.0.0)",
+    "types-defusedxml (>=0.7.0.20250822,<0.8.0.0)"
 ]
 
 

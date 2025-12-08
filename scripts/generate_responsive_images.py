@@ -1,11 +1,12 @@
-import re
-from pathlib import Path
-from urllib.parse import urlparse
 from io import BytesIO
-from PIL import Image
-import requests
+from pathlib import Path
+from typing import cast
+from urllib.parse import urlparse
 
+import requests
 from bs4 import BeautifulSoup
+from bs4._typing import _AttributeValue
+from PIL import Image
 
 BASE_URL = "https://ik.imagekit.io/vu0zmaqce/"
 SIZES = [
@@ -76,8 +77,8 @@ def update_figure_with_srcset(content):
 
         # Get image dimensions to prevent layout shift
         width, height = get_image_dimensions(src)
-        img['width'] = width
-        img['height'] = height
+        img['width'] = cast(_AttributeValue, width)
+        img['height'] = cast(_AttributeValue, height)
 
         # Create lightGallery link
         fig_caption = figure.find('figcaption')
