@@ -20,15 +20,15 @@ This creates the following structure:
 ```
 
 To learn more about the specific files and directories that are generated for
-you, please consult the usage guide for the __new__ command.
+you, please consult the usage guide for the **new** command.
 
 [new]: usage/new.md#usage
 
 ## Configuration
 
-Zensical comes with many [configuration options] that have sensible defaults,
+Zensical comes with many configuration options that have sensible defaults,
 which allows to build a documentation site with almost no configuration.
-__site_name__ is the only required setting
+**site_name** is the only required setting
 
 ``` toml
 [project]
@@ -54,9 +54,6 @@ zensical serve
 ```
 
 Point your browser to [localhost:8000][live preview] and you should see:
-
-[![Creating your site]][Creating your site]
-[![Creating your site dark]][Creating your site dark]
 
   [live preview]: http://localhost:8000
   [Creating your site]: assets/screenshots/creating-your-site.png#gh-light-mode-only
