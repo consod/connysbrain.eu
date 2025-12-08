@@ -46,9 +46,9 @@ Ordered:
 
 ## Blockquotes
 ```
-> This is a blockquote
-> Multiple lines
->> Nested quote
+&gt; This is a blockquote
+&gt; Multiple lines
+&gt;&gt; Nested quote
 ```
 
 ## Code blocks
