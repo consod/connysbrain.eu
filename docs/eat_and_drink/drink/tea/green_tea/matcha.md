@@ -1,3 +1,10 @@
+---
+icon:
+title: Matcha
+subtitle:
+date: 2025-11-29
+description: A Japanese green tea powder used for making matcha tea.
+---
 # Matcha
 
 # Brands

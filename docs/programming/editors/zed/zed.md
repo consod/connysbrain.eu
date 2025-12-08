@@ -1,6 +1,9 @@
 ---
+icon:
 title: What is Zed?
+subtitle:
 date: 2025-11-29
+description: A minimalistic text editor with a focus on developer productivity.
 ---
 
 # Zed.dev Love your editor again

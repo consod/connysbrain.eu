@@ -1,5 +1,9 @@
 ---
+icon:
 title: Git Bash in Zed
+subtitle: 
+date: 2025-11-29
+description: How to add Git Bash as the default terminal in Zed for Windows.
 ---
 
 # Git Bash as default terminal in Zed - Windows
