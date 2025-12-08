@@ -8,21 +8,57 @@ permissions:
   contents: read
   pages: write
   id-token: write
+
 jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      build_success: ${{ steps.build_status.outputs.result }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - name: Build site
+        id: build
+        run: |
+          pip install zensical
+          zensical build --clean
+          echo "build_success=true" >> $GITHUB_OUTPUT
+      - name: Upload artifact
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: site-build
+          path: site
+          retention-days: 7
+
   deploy:
+    needs: build
+    if: ${{ needs.build.outputs.build_success }}
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/configure-pages@v5
-      - uses: actions/checkout@v5
-      - uses: actions/setup-python@v5
+      - uses: actions/download-artifact@v4
         with:
-          python-version: 3.x
-      - run: pip install zensical
-      - run: zensical build --clean
+          name: site-build
+          path: site
+      - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
           path: site
-      - uses: actions/deploy-pages@v4
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
+  fallback-deploy:
+    if: failure() && needs.build.result == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get latest successful deployment
+        run: |
+          # This would need to be implemented to retrieve the previous artifact
+          echo "Implement logic to retrieve previous successful build"
+      # Additional steps to deploy the previous version
