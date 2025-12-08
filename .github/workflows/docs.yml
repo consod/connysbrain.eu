@@ -25,6 +25,9 @@ jobs:
       - name: Run responsive images script
         run: |
           python scripts/generate_responsive_images.py
+      - name: Generate navigation
+        run: |
+          python scripts/generate_nav.py
       - name: Build site
         id: build
         run: |
