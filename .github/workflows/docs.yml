@@ -19,10 +19,15 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
+      - name: Install dependencies
+        run: |
+          pip install zensical beautifulsoup4
+      - name: Run responsive images script
+        run: |
+          python scripts/generate_responsive_images.py
       - name: Build site
         id: build
         run: |
-          pip install zensical
           zensical build --clean
           echo "build_success=true" >> $GITHUB_OUTPUT
       - name: Upload artifact
@@ -57,8 +62,15 @@ jobs:
     if: failure() && needs.build.result == 'success'
     runs-on: ubuntu-latest
     steps:
-      - name: Get latest successful deployment
-        run: |
-          # This would need to be implemented to retrieve the previous artifact
-          echo "Implement logic to retrieve previous successful build"
-      # Additional steps to deploy the previous version
+      - name: Download previous successful build
+        uses: actions/download-artifact@v4
+        with:
+          name: site-build
+          path: site
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - name: Deploy fallback version
+        id: deployment
+        uses: actions/deploy-pages@v4
