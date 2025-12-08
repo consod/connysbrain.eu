@@ -1,5 +1,9 @@
 import re
 from pathlib import Path
+from urllib.parse import urlparse
+from io import BytesIO
+from PIL import Image
+import requests
 
 from bs4 import BeautifulSoup
 
@@ -11,7 +15,7 @@ SIZES = [
     (480, 75),   # Android phones
     (640, 80),   # Larger phones/early tablets
     (688, 80),   # Larger phones/early tablets
-    (768, 80),   # Tablets (iPad, Android) 【0】
+    (768, 80),   # Tablets (iPad, Android)
     (960, 80),   # Larger tablets/landscape mode
     (1024, 80),  # Small laptops/tablet landscape
     (1280, 85),  # Standard desktop
@@ -26,6 +30,24 @@ def generate_client_hints_meta():
     """Generate Client Hints meta tag for HTML head"""
     return '<meta http-equiv="Accept-CH" content="DPR, Width, Viewport-Width">'
 
+def get_image_dimensions(image_url):
+    """Get actual width and height of image from URL"""
+    try:
+        # Extract the base image URL (without transformations)
+        parsed_url = urlparse(image_url)
+        filename = parsed_url.path.split('/')[-1].split('?')[0]
+        base_image_url = f"{BASE_URL}{filename}"
+
+        # Download the image to get its dimensions
+        response = requests.get(base_image_url, stream=True)
+        response.raise_for_status()
+
+        image = Image.open(BytesIO(response.content))
+        return image.size  # Returns (width, height)
+    except Exception as e:
+        print(f"Error getting image dimensions: {e}")
+        # Fallback to using the largest size in SIZES
+        return (SIZES[-1][0], int(SIZES[-1][0] * 0.8))
 
 def update_figure_with_srcset(content):
     """Update figure/img tags with srcset and wrap with lightGallery links"""
@@ -52,6 +74,11 @@ def update_figure_with_srcset(content):
         img['sizes'] = "(max-width: 480px) 100vw, (max-width: 768px) 90vw, 1024px"
         img['loading'] = 'lazy'
 
+        # Get image dimensions to prevent layout shift
+        width, height = get_image_dimensions(src)
+        img['width'] = width
+        img['height'] = height
+
         # Create lightGallery link
         fig_caption = figure.find('figcaption')
         caption_text = fig_caption.get_text() if fig_caption else ""
@@ -63,7 +90,7 @@ def update_figure_with_srcset(content):
         link = soup.new_tag('a',
                            attrs={
                              'href': full_size_url,
-                             'data-lg-size': f'{SIZES[-1][0]}-{int(SIZES[-1][0]*0.8)}',
+                             'data-lg-size': f'{width}-{height}',
                              'data-sub-html': f"<figcaption>{caption_text}</figcaption>"
                            }
                          )
@@ -72,7 +99,6 @@ def update_figure_with_srcset(content):
         img.wrap(link)
 
     return str(soup)
-
 
 def process_markdown_files(root_dir="../docs"):
     """Recursively process all .md files in docs directory"""
