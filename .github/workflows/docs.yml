@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      build_success: ${{ steps.build_status.outputs.result }}
+      build_success: ${{ steps.build.outputs.result }}  # Fixed: was 'build_status'
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v5
