@@ -14,8 +14,9 @@ dependencies = [
     "ruff (>=0.14.7,<0.15.0)"
 ]
 
+
 [tool.poetry]
-packages = [{include = "connysbrain"}]
+package-mode = false
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
