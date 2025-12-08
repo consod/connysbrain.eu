@@ -13,7 +13,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     outputs:
-      build_success: ${{ steps.build.outputs.build_success }}  # Fixed: now references correct output name
+      build_success: ${{ steps.build.outputs.build_success }} # Fixed: now references correct output name
     steps:
       - uses: actions/checkout@v5
       - uses: actions/setup-python@v5
@@ -21,7 +21,7 @@ jobs:
           python-version: 3.x
       - name: Install dependencies
         run: |
-          pip install zensical beautifulsoup4
+          pip install zensical beautifulsoup4 requests pillow
       - name: Run responsive images script
         run: |
           python scripts/generate_responsive_images.py
