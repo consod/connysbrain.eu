@@ -77,35 +77,37 @@ zensical build
 # Navigation Generator
 The scripts/generate_nav.py script automatically generates the navigation structure based on the docs/ folder hierarchy:
 
-Reads directory structure and .order files for custom ordering.
-Extracts page titles from frontmatter when available, otherwise falls back to filenameand automatically formats category names (e.g., eat_and_drink becomes Eat & Drink)
-Updates the nav section in zensical.toml after the copyright field
-Handles both single-line and multi-line copyright declarations
+Reads directory structure and .order files for custom ordering. \
+Extracts page titles from frontmatter when available, otherwise falls back to filename and automatically formats category names (e.g., eat_and_drink becomes Eat & Drink) \
+Updates the nav section in zensical.toml after the copyright field \
+Handles both single-line and multi-line copyright declarations \
 The script ensures the navigation stays synchronized with the documentation structure without manual updates.
 
 ### Responsive Images Generator
 The scripts/generate_responsive_images.py script processes images to create responsive versions:
 
-Optimizes images for web delivery
-Generates multiple sizes for responsive design
-Integrates with the Zensical build process
-GitHub Actions Workflow
-The site uses a comprehensive CI/CD pipeline configured in .github/workflows/documentation.yml:
+Optimizes images for web delivery \
+Generates multiple sizes for responsive design \
+Integrates with the Zensical build process \
+
+## GitHub Actions Workflow
+The site uses a CI/CD pipeline configured in .github/workflows/documentation.yml:
 
 ### Build Job:
 
-Checks out code and sets up Python
-Installs Zensical and BeautifulSoup4
-Runs the responsive images script
-Executes the navigation generator
-Builds the site with zensical build --clean
-Uploads the built site as an artifact
+Checks out code and sets up Python \
+Installs Zensical and BeautifulSoup4 \
+Runs the responsive images script \
+Executes the navigation generator \
+Builds the site with zensical build --clean \
+Uploads the built site as an artifact \
+
 ### Deploy Job:
 
-Deploys the built site to GitHub Pages when the build succeeds
+Deploys the built site to GitHub Pages when the build succeeds \
 Configures the deployment environment
 
 ### Fallback Deploy:
 
-Provides a safety mechanism to deploy a previous successful build if the current build fails
-Ensures site availability even when new changes introduce build issues
+Provides a safety mechanism to deploy a previous successful build if the current build fails \
+Ensures site availability even when new changes introduce build issues \
