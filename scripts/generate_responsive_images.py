@@ -8,8 +8,14 @@ SIZES = [
     (320, 70),   # Small mobile devices
     (375, 70),   # iPhone SE/older Android
     (414, 75),   # iPhone 8 Plus/XR
-    (1024, 85),  # Standard desktop
-    (1280, 85),  # Retina/MacBook Pro
+    (480, 75),   # Android phones
+    (640, 80),   # Larger phones/early tablets
+    (688, 80),   # Larger phones/early tablets
+    (768, 80),   # Tablets (iPad, Android) 【0】
+    (960, 80),   # Larger tablets/landscape mode
+    (1024, 80),  # Small laptops/tablet landscape
+    (1280, 85),  # Standard desktop
+    (1440, 85),  # Retina/MacBook Pro
     (1920, 90),  # Full HD displays
     (2560, 90),  # QHD/2K displays
     (3840, 95)   # 4K/UHD displays
