@@ -27,17 +27,11 @@ def generate_nav_text(docs_dir="docs"):
     docs_path = Path(docs_dir)
     nav_lines = ["nav = ["]
 
-    category_names = {
-        "eat_and_drink": "Eat & Drink",
-        "entertainment": "Entertainment",
-        "guides": "Guides",
-        "programming": "Programming"
-    }
-
     for category_dir in docs_path.iterdir():
         if category_dir.is_dir():
-            category_key = category_dir.name
-            category_name = category_names.get(category_key, category_key.replace('_', ' ').title())
+            # Convert directory name to readable format
+            # Replace underscores with spaces and apply title case
+            category_name = category_dir.name.replace('_', ' ').title()
 
             # Process directory structure
             content = process_directory_text(category_dir, docs_path)

@@ -38,7 +38,7 @@ copyright = """Copyright &copy; 2025 Conny Söderholm
 """
 
 nav = [
-  {"Eat & Drink" = [    {"Drink" = [
+  {"Eat And Drink" = [    {"Drink" = [
       {"Tea" = [
         {"Green Tea" = [
           {"Matcha" = "eat_and_drink/drink/tea/green_tea/matcha.md"}
