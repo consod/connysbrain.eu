@@ -86,7 +86,7 @@ nav = [
 #
 # Read more: https://zensical.org/docs/customization/#additional-css
 #
-#extra_css = ["assets/stylesheets/extra.css"]
+extra_css = ["https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/css/lightgallery.min.css"]
 
 # With the `extra_javascript` option you can add your own JavaScript to your
 # project to customize the behavior according to your needs.
@@ -94,7 +94,8 @@ nav = [
 # The path provided should be relative to the "docs_dir".
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
-#extra_javascript = ["assets/javascript/extra.js"]
+extra_javascript = ["https://cdnjs.cloudflare.com/ajax/libs/lightgallery/2.8.1/lightgallery.umd.min.js", "javascripts/lightgallery.js"]
+
 
 # ----------------------------------------------------------------------------
 # Section for configuring theme options
