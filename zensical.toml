@@ -95,7 +95,6 @@ extra_css = ["stylesheets/lightgallery.css"]
 #
 # Read more: https://zensical.org/docs/customization/#additional-javascript
 
-extra_css = ["assets/css/lightgallery.css"]
 extra_javascript = ["javascripts/lightgallery.umd.js", "javascripts/lightgallery.js"]
 
 
