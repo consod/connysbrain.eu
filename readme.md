@@ -1,5 +1,5 @@
 # Zensical's main documentation
-[https://zensical.org/docs/get-started/][Zensical docs]
+[Zensical docs](https://zensical.org/docs/get-started/)
 
 # Create your site
 
