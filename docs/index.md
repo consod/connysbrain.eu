@@ -20,7 +20,7 @@ This site is built with [Zensical](https://zensical.org), a static site generato
         https://ik.imagekit.io/vu0zmaqce/brain_1.jpg?tr=w-640,q-80 640w, 
         https://ik.imagekit.io/vu0zmaqce/brain_1.jpg?tr=w-768,q-80 768w,
         https://ik.imagekit.io/vu0zmaqce/brain_1.jpg?tr=w-1024,q-85 1024w
-      "/>
+      " width="1024" height="850" />
 </figure>
 </a>
 </div>
