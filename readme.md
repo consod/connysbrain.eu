@@ -74,7 +74,7 @@ zensical build
 ```
 
 ## Custom Scripts
-# Navigation Generator
+### Navigation Generator
 The scripts/generate_nav.py script automatically generates the navigation structure based on the docs/ folder hierarchy:
 
 Reads directory structure and .order files for custom ordering. \
@@ -90,7 +90,7 @@ Optimizes images for web delivery \
 Generates multiple sizes for responsive design \
 Integrates with the Zensical build process
 
-## GitHub Actions Workflow
+### GitHub Actions Workflow
 The site uses a CI/CD pipeline configured in .github/workflows/documentation.yml:
 
 ### Build Job:
