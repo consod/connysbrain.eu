@@ -10,7 +10,7 @@ description: A great tea
 
 Moya Kukicha is an organic Japanese green tea made primarily from the stems and twigs of the tea plant (Camellia sinensis), rather than solely from the leaves used in most green teas.
 
-![Moya Kukicha Tea](https://ik.imagekit.io/vu0zmaqce/tea/moya_kukicha_1?tr=w-3840,q-95)
+![Moya Kukicha Tea](https://ik.imagekit.io/vu0zmaqce/tea/moya_kukicha_1.jpg?tr=w-3840,q-95)
 
 
 ## Flavor Profile
@@ -27,4 +27,4 @@ Low in caffeine (since caffeine concentrates in leaves) but higher in L-theanine
 - Temp: 70–80°C (avoid boiling to prevent bitterness).
 - Style: Excellent as hot tea or cold brew (refrigerate 4–8 hours for ultra-smooth results).
 
-![Brewed Moya Kukicha Tea](https://ik.imagekit.io/vu0zmaqce/tea/moya_kukicha_2?tr=w-3840,q-95)
+![Brewed Moya Kukicha Tea](https://ik.imagekit.io/vu0zmaqce/tea/moya_kukicha_2.jpg?tr=w-3840,q-95)
